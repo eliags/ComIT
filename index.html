@@ -1,69 +1,129 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
+<!-- Plantilla de sitio de tres columnas en HTML5 -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/prueba.css">
-
-
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="JMSR">
+  <meta name="description" content="Plantilla para documento HTML 5">
+  <meta name="keywords" content="HTML, CSS">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  
+  <title>Plantilla para documento HTML 5</title>
+  
+  <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+    }
+    #espacioSuperior
+    {
+      background-color: #E6E6E6;
+    }
+    #contenedorPagina
+    {
+      margin: 0 auto;
+      border: 1px solid #9900CC;
+      height: 85%;
+    }
+    
+    #encabezado
+    {
+      height: 50px;
+      background-color: #FF3300;
+    }
+    #aLaIzquierda
+    {
+      width: 20%;
+      height: 500px;
+      float: left;
+      background-color: #0066FF;
+    }
+    #contenidoPrincipal
+    {
+      width: 60%;
+      float: left;
+      background-color: #FFFFFF;
+    }
+    #aLaDerecha
+    {
+      width: 20%;
+      height: 500px;
+      float: right;
+      background-color: #006600;
+    }
+    #piePagina
+    {
+      clear: both;
+      height: 25px;
+      background-color: #CC6699;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#trabajos">Trabajos</a>
-            <a href="#contacto">Contacto</a>
-            <a href="./parte2.html">Ir a otros</a>
-        </nav>
+  <div id="espacioSuperior">
+    <h1>Ejemplo</h1>
+  </div>
+  <div id="contenedorPagina">
+    <header id="encabezado">
+      <p>#encabezado</p>
     </header>
+    <aside id="aLaIzquierda">
+      <p>#aLaIzquierda</p>
+    </aside>
+    <section id="contenidoPrincipal">
+      <p>#contenidoPrincipal</p>
+    </section>
+    <aside id="aLaDerecha">
+      <p>#aLaDerecha</p>
+    </aside>
+    <footer id="piePagina">
+      <p>#piePagina</p>
+    </footer>
+  </div>
 
-    <main>
-        <section class="perfil">
-            <img src="./img/imagen01.png" alt="foto prueba">
-            <h1>Eliana Silva</h1>
-            <p>Trainee Dev</p>
-        </section>
+  <form id="dataForm">
+    <div class="form-group row">
+        <label for="data" class="col-2 col-form-label">Nombre perro</label> <br/>
+        <div class="col-10">
+            <input id="data" name="data" class="form-control" type="text" value="">
+        </div>
 
-        <section id="proyectos" class="seccion-principal">
-            <h2>Proyectos</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit aliquid iure delectus recusandae facilis, fugit reiciendis sequi ipsum a mollitia nemo autem, culpa, voluptas perspiciatis <a>repudiandae</a> quibusdam vel ipsam veritatis!</p>
+        <label for="data" class="col-2 col-form-label">Raza</label> <br/>
+        <div class="col-10">
+            <input id="data2" name="data2" class="form-control" type="text" value="">
+        </div>
 
-            <div class="proyectos-contenedor">
-                <section class="proyecto">
-                    <h3>Ejemplo 1</h3>
-                    <div class="foto"></div>
-                    <p>Descripción del proyecto</p>
-                </section>
+        <label for="data3" class="col-2 col-form-label">Vacunado?</label> <br/>
+        <div class="col-10">
+            <input id="data3" name="data3" class="form-control" type="text" value="">
+        </div>
+    </div>
+    <input class="btn btn-large btn-primary" value="Ingresar datos" type="submit">
+</form>
+<button onclick="processData()">Post-process</button>
 
-                <section class="proyecto">
-                    <h3>Ejemplo 2</h3>
-                    <div class="foto"></div>
-                    <p>Descripción del proyecto</p>
-                </section>
-            </div>
-        </section>
+  <script> source="./js/"
+  
 
-        <section id="trabajos" class="seccion-principal">
-            <h2>Trabajos</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit aliquid iure delectus recusandae facilis, fugit reiciendis sequi ipsum a mollitia nemo autem, culpa, voluptas perspiciatis <a>repudiandae</a> quibusdam vel ipsam veritatis!</p>
-            <div class="principal">
-                <h2>Lorem, ipsum dolor sit amet</h2>
-            </div>
-            <div class="secundario">
-                <h2>amet consectetur adipisicing elit.</h2>
-            </div>
-        </section>
-        <section id="contacto" class="seccion-principal">
-            <h2>Contacto</h2>
-            <p>Eli</p>
-        </section>
-    </main>
+var perro;
+var raza, tamanio, pelo;
+var edad = Number*3;
+var vacunado = Boolean;
 
+var data = [];
+    $("#dataForm").submit(function(event) {
+        event.preventDefault();
+        data.push($(this).find('input[name="data"]').val());
+        data2.push($(this).find('input[name="data"]').val());
+        data3.push($(this).find('input[name="data"]').val());
+        alert("Dato Añadida");
+    });
+
+    function processData() {
+        alert(data,data2,data3);
+    }
+
+</script>
 </body>
-
 </html>
