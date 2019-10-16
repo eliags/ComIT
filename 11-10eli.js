@@ -153,17 +153,17 @@ return (recibeFx());
 }
 
 // 5
-function operar1(recibeFx,number1){
+ function operar1(recibeFx,number1){
     number1= recibeFx;
-    return (recibeFx);
+    return (number1)
 }
 
 // 6
 
-function vago(llamado){
-    var llamado = new Object();
-    llamado.magia = function (ingresado){ return console.log(ingresado);}
-}
+ function vago(llamado){
+     llamado = function () { console.log("hola")}
+     return llamado();
+    }
 
 
  
