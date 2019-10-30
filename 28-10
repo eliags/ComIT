@@ -33,25 +33,22 @@ console.log("la suma es", numero1+numero2);
 
 
 
-// Programa 3
-var ingreso = parseInt(process.argv[1,2,3,4,5].array.forEach(element => {
-    console.log(resultado = element*resultado)
-}));
-
-
-/*var total;
-
-    for (f=1;f<ingreso.length;f++) {
-      total = ingreso[f] * total;
+// Programa 3 no funciona, multiplica el último número como quiere y no guarda los anteriores.
+var numeros = new Array(5);
+var f;
+for (f = 0; f < numeros.length; f++) {
+    var v = parseInt(process.argv[2, 3, 4, 5, 6]); // process.argv[0] == "node" process.argv[1] == "test.js" process.argv[2] == "argumento1"
+    numeros[f] = parseInt(v);
 }
 
-console.log(total); */
+var resultado = 1;
+for (f = 0; f < numeros.length; f++) {
+    resultado = numeros[f] * resultado;
+}
+console.log(resultado);
 
 
-
-
-
-console.log(`Su primer valor es: ${process.argv[1]} segundo 
+console.log(`Valor 1 ingresado: ${process.argv[2]}Valor 2 ingresado: ${process.argv[3]}\nValor 3 ingresado: ${process.argv[4]}Valor 4 ingresado: ${process.argv[5]} Valor 5 ingresado: ${process.argv[6]}`)
 
 
 
